@@ -1,0 +1,27 @@
+@model FormData;
+@{
+    var ageErrorText = "This is not the age we're looking for";
+}
+
+<table>
+    <thead>
+    <tr>
+        <th>@Html.LabelFor(m => m.Title)</th>
+        <th>@Html.LabelFor(m => m.Name)</th>
+        <th>@Html.LabelFor(m => m.Age)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>@Html.TextBoxFor(m => m.Title)</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+        <td>@Html.TextBoxFor(m => m.Age)</td>
+    </tr>
+    <tr>
+        <td>@Html.ValidationMessageFor(m => m.Title)</td>
+        <td>@Html.ValidationMessageFor(m => m.Name)</td>
+        <td>@Html.ValidationMessageFor(m => m.Age, ageErrorText, new { @class = "text-danger" })</td>
+    </tr>
+    </tbody>
+</table>
+@Html.ValidationSummary()

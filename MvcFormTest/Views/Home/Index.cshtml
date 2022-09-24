@@ -1,0 +1,10 @@
+﻿@model FormModel;
+@{
+
+}
+
+<h1>Main page</h1>
+<div id="content">
+    @Html.Partial("_Form", Model.FormData)
+</div>
+<h5>Some other content loaded at @(DateTime.Now)</h5>

@@ -1,0 +1,12 @@
+@model FormData;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form id="form">
+    @Html.AntiForgeryToken()
+    <div id="formContent">
+        @Html.Partial("_FormData")        
+    </div>
+    <input id="submitButton" type="submit" value="Submit"/>
+</form>

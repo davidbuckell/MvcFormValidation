@@ -1,0 +1,9 @@
+/* Added to hide MVC validation errors by default */
+.field-validation-valid
+{
+    display: none;
+}
+.validation-summary-valid
+{
+    display: none;
+}
